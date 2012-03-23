@@ -35,4 +35,10 @@ public class FacturaTest {
         System.out.println("La factura debe tener codigo y monto");
     }
     
+     @Test
+    public void siIngresoElCodigoyMontoMeDebeDarIngresoSatisfactorio(){
+        Factura admFactura = new Factura();        
+        assertFalse(admFactura.verificarFactura(null));
+        System.out.println("Ingreso satisfactorio");
+    } 
 }

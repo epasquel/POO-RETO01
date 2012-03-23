@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class Premio {
 
     public Premio() {               
-        this.montoTotal = 0.0;
+        this.montoTotal = 10.0;
     }      
     
     protected double montoTotal;
