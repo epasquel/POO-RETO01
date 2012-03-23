@@ -11,12 +11,12 @@ public class PremioNormalTest {
     
    @Test
     public void ClienteNormalObtienePremiosNormales() {
-        
+         String codigo = "cl001"; 
         String dni = "45687542";
         String nombre = "Ebert";
         String apellido = "Pasquel";
         String tipo = "Normal";
-        Cliente cliente = new Cliente(dni, nombre, apellido, tipo);
+        Cliente cliente = new Cliente(codigo, dni, nombre, apellido, tipo);
         
         ArrayList<Factura> listFactura = new ArrayList<Factura>();
         listFactura.add(new Factura("F00001", 620));

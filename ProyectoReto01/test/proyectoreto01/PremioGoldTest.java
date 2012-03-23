@@ -1,3 +1,4 @@
+
 package proyectoreto01;
 
 import java.util.ArrayList;
@@ -33,21 +34,19 @@ public class PremioGoldTest {
     
     
     protected void ingresarCliente(){
+        String codigo = "cl001";
         String dni = "45687542";
         String nombre = "Ebert";
         String apellido = "Pasquel";
         String tipo = "Gold";
-        cliente = new Cliente(dni, nombre, apellido, tipo);
+        cliente = new Cliente(codigo, dni, nombre, apellido, tipo);
         
         ArrayList<Factura> listFactura = new ArrayList<Factura>();
         listFactura.add(new Factura("F00001", 620));
         listFactura.add(new Factura("F00002", 200));
         listFactura.add(new Factura("F00003", 180));
         listFactura.add(new Factura("F00004", 550));
-        listFactura.add(new Factura("F00005", 800));
-        listFactura.add(new Factura("F00006", 250));
-        listFactura.add(new Factura("F00007", 700));
-        listFactura.add(new Factura("F00008", 20));
+        listFactura.add(new Factura("F00005", 450));
         cliente.setListfactura(listFactura);        
         cliente.procesarPremio();
     }

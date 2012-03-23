@@ -5,7 +5,9 @@ import java.util.ArrayList;
 
 public class Cliente {
 
-    public Cliente(String DNI, String Nombre, String Apellido, String Tipo) {
+    public Cliente(String codigo, String DNI, String Nombre, String Apellido, String Tipo) {
+        
+         this.codigo = codigo;
         this.DNI = DNI;
         this.Nombre = Nombre;
         this.Apellido = Apellido;
@@ -22,7 +24,7 @@ public class Cliente {
         }
         
     }
-    
+    private String  codigo;
     private String DNI;
     private String Nombre;
     private String Apellido;
@@ -30,6 +32,15 @@ public class Cliente {
     private ArrayList<Factura> listfactura;
     private Premio premio;
 
+ 
+      
+     public String getcodigo() {
+        return codigo;
+    }
+
+    public void setcodigo(String codigo) {
+        this.codigo = codigo;
+    }
     public Premio getPremio() {
         return premio;
     }
@@ -61,6 +72,8 @@ public class Cliente {
     public void setDNI(String DNI) {
         this.DNI = DNI;
     }
+    
+  
 
     public String getNombre() {
         return Nombre;
