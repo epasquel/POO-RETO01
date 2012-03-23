@@ -4,14 +4,19 @@
  */
 package proyectoreto01;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author epasquel
  */
 public class PremioPlatinium extends Premio{
 
-    public PremioPlatinium() {
+    public PremioPlatinium(ArrayList<Factura> listfactura) {
         super();
+        for(Factura factura : listfactura){
+            montoTotal += factura.getMontoFactura();
+        }
     }
     
     public Integer calcularPuntos(){

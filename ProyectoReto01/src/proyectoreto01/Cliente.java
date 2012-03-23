@@ -9,15 +9,18 @@ public class Cliente {
         this.DNI = DNI;
         this.Nombre = Nombre;
         this.Apellido = Apellido;
-        this.Tipo = Tipo;        
-        if (Tipo.equals("Normal")){
-            premio = new PremioNormal();
-        }else if (Tipo.equals("Gold")){
-            premio = new PremioGold();            
-        }else if (Tipo.equals("Platinium")){
-            premio = new PremioPlatinium();
+        this.Tipo = Tipo; 
+        this.listfactura = new ArrayList<Factura>();
+        if(Tipo != null){
+            if (Tipo.equals("Normal")){
+                premio = new PremioNormal(listfactura);
+            }else if (Tipo.equals("Gold")){
+                premio = new PremioGold(listfactura);            
+            }else if (Tipo.equals("Platinium")){
+                premio = new PremioPlatinium(listfactura);
+            }
         }
-        listfactura = new ArrayList<Factura>();
+        
     }
     
     private String DNI;
@@ -75,5 +78,24 @@ public class Cliente {
         this.Tipo = Tipo;
     }
 
+    public void procesarPremio(){
+       if (Tipo.equals("Normal")){
+            premio = new PremioNormal(listfactura);
+        }else if (Tipo.equals("Gold")){
+            premio = new PremioGold(listfactura);            
+        }else if (Tipo.equals("Platinium")){
+            premio = new PremioPlatinium(listfactura);
+        }
+        
+    }
+    
+    
+    public Boolean validarCamposObligatorios(){
+        Boolean succes = false;
+//        if(this.DNI != null){
+//            succes = true;
+//        }
+        return succes;
+    }
     
 }

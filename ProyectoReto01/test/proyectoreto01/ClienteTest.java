@@ -30,14 +30,17 @@ public class ClienteTest {
         Premio premio = cliente.getPremio();
         assertNotNull(premio);
         
-    }
+    }     
     
     @Test
-    public void ingresoDeFacturaDebeSerDelMes(){
-        
+    public void clienteDebeIngresarDatosMandatorios(){
+        String dni = null;
+        String nombre = null;
+        String apellido = null;
+        String tipo = null;
+        Cliente cliente = new Cliente(dni, nombre, apellido, tipo);
+        assertFalse(cliente.validarCamposObligatorios());
+        System.out.println("Debe ingresar los campos obligatorios");
     }
-    
-    
-    
     
 }
