@@ -1,4 +1,3 @@
-
 package proyectoreto01;
 
 import java.util.ArrayList;
@@ -45,7 +44,10 @@ public class PremioGoldTest {
         listFactura.add(new Factura("F00002", 200));
         listFactura.add(new Factura("F00003", 180));
         listFactura.add(new Factura("F00004", 550));
-        listFactura.add(new Factura("F00005", 450));
+        listFactura.add(new Factura("F00005", 800));
+        listFactura.add(new Factura("F00006", 250));
+        listFactura.add(new Factura("F00007", 700));
+        listFactura.add(new Factura("F00008", 20));
         cliente.setListfactura(listFactura);        
         cliente.procesarPremio();
     }
