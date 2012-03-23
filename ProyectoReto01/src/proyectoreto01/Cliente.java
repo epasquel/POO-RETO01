@@ -105,9 +105,9 @@ public class Cliente {
     
     public Boolean validarCamposObligatorios(){
         Boolean succes = false;
-//        if(this.DNI != null){
-//            succes = true;
-//        }
+        if(this.codigo != null && this.DNI != null && this.Nombre != null && this.Apellido != null && this.Tipo != null){
+            succes = true;
+        }
         return succes;
     }
     

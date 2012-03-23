@@ -37,8 +37,9 @@ public class FacturaTest {
     
      @Test
     public void siIngresoElCodigoyMontoMeDebeDarIngresoSatisfactorio(){
-        Factura admFactura = new Factura();        
-        assertFalse(admFactura.verificarFactura(null));
+        Factura factura = new Factura("F0001", 120.00); 
+        Factura admFactura = new Factura();
+        assertTrue(admFactura.verificarFactura(factura));
         System.out.println("Ingreso satisfactorio");
     } 
 }
