@@ -1,15 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package proyectoreto01;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author epasquel
- */
 public class PremioPlatinium extends Premio{
 
     public PremioPlatinium(ArrayList<Factura> listfactura) {
